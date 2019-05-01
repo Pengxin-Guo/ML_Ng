@@ -16,7 +16,19 @@ p = zeros(m, 1);
 %
 
 
+% My answer
 
+% step1: compute hx
+hx = X * theta;
+
+% step2: compute h(hx)
+for i = 1 : m
+  if sigmoid(hx(i)) >= 0.5
+    p(i) = 1;
+  else 
+    p(i) = 0;
+  endif
+endfor
 
 
 

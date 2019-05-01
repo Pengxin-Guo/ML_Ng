@@ -22,9 +22,6 @@ grad = zeros(size(theta));
 
 % My answer
 
-J = 0;
-grad = zeros(size(theta);
-
 Jtmp = 0;
 h = zeros(m, 1);
 
