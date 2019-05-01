@@ -12,6 +12,7 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
+% My answer
 
 % Find Indices of Positive and Negative Examples
 pos = find(y==1); neg = find(y == 0);
