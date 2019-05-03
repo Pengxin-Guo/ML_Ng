@@ -17,10 +17,14 @@ for iter = 1:num_iters
     %       of the cost function (computeCostMulti) and gradient here.
     %
 
-
-
-
-
+    % My answer
+    
+    h = X * theta;
+    sum1 = zeros(size(X, 2), 1);  % #features row
+    for i = 1:m
+      sum1 = sum1 + (h(i) - y(i)).*X(i, :)';
+    endfor
+    theta = theta - alpha * sum1 / m;
 
 
 

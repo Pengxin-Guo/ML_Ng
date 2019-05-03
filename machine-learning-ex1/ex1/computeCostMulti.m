@@ -13,7 +13,19 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+% My answer
 
+Jtmp = 0;
+h = zeros(m, 1);
+
+% step1: compute hx
+h = X * theta;
+
+% step2: compute cost function's sum part
+for i = 1:m
+  Jtmp  = Jtmp + (y(i) - h(i)) * (y(i) - h(i));
+endfor
+J = Jtmp / (2 * m);
 
 
 

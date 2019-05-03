@@ -106,6 +106,13 @@ fprintf('\n');
 % not need to be normalized.
 price = 0; % You should change this
 
+% My answer
+X_p = [1650 3];
+X_p = (X_p - mu)./sigma;
+X_p = [1 X_p];
+price = theta'*X_p';
+
+
 
 % ============================================================
 
@@ -151,6 +158,11 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 price = 0; % You should change this
 
+% My answer
+X_p=[1650 3];
+X_p = [1 X_p];
+disp(X_p');
+price = theta'*X_p';
 
 % ============================================================
 
