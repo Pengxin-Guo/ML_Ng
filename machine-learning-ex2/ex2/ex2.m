@@ -24,6 +24,7 @@ clear ; close all; clc
 %  contains the label.
 
 data = load('ex2data1.txt');
+% data = load('data.txt');     % 周志华机器学习课后题3.3数据
 X = data(:, [1, 2]); y = data(:, 3);
 
 %% ==================== Part 1: Plotting ====================
