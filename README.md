@@ -3,3 +3,5 @@
 #### machine-learning-ex1 : Linear Regression 
 
 #### machine-learning-ex2 : Logistic Regression 
+
+#### machine-learning-ex3 : Multi-class Classification and Neural Networks 
