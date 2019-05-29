@@ -63,21 +63,31 @@ Theta2_grad = zeros(size(Theta2));
 %
 
 
+% My answer
 
+a1 = [ones(m, 1) X];      % 5000x401
+z2 = Theta1 * a1';        % 25x5000
+a2 = sigmoid(z2);
+a2 = [ones(1, m); a2];    % 26x5000
+z3 = Theta2 *a2;          % 10x5000
+a3 = sigmoid(z3);
+h = a3;
 
+% 把label形式的y转换为向量形式
+y_vect = zeros(num_labels, m);
+for i = 1:m
+  y_vect(y(i), i) = 1;
+endfor
 
+for i = 1:m
+  J = J + sum(-log(h(:, i))' * y_vect(:, i) - log(1 - h(:, i))' * (1 - y_vect(:, i)));
+endfor
+J = J / m;
 
-
-
-
-
-
-
-
-
-
-
-
+% 加入正则化项
+Theta1_use = Theta1(:, 2:end);
+Theta2_use = Theta2(:, 2:end);
+J = J + lambda / 2 / m * (sum(sum(Theta1_use .^ 2)) + sum(sum(Theta2_use .^ 2)));
 
 
 % -------------------------------------------------------------
