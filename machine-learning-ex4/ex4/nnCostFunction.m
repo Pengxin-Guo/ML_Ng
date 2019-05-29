@@ -89,6 +89,23 @@ Theta1_use = Theta1(:, 2:end);
 Theta2_use = Theta2(:, 2:end);
 J = J + lambda / 2 / m * (sum(sum(Theta1_use .^ 2)) + sum(sum(Theta2_use .^ 2)));
 
+% 计算梯度
+% Δ的元素个数应该和对应的theta中的元素的个数相同
+Delta1 = zeros(size(Theta1));
+Delta2 = zeros(size(Theta2));
+for i = 1:m
+  delta3 = a3(:, i) - y_vect(:, i);
+  temp = Theta2' * delta3;
+  delta2 = temp(2:end, :) .* sigmoidGradient(z2(:, i));
+  Delta2 = Delta2 + delta3 * a2(:, i)';
+  Delta1 = Delta1 + delta2 * a1(i, :);
+endfor
+
+Theta1_grad = Delta1 / m;
+Theta2_grad = Delta2 / m;
+Theta1_grad(:, 2:end) = Theta1_grad(:, 2:end) + lambda / m * Theta1(:, 2:end);
+Theta2_grad(:, 2:end) = Theta2_grad(:, 2:end) + lambda / m * Theta2(:, 2:end);
+
 
 % -------------------------------------------------------------
 
