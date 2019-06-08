@@ -8,6 +8,4 @@
 
 #### machine-learning-ex4 : Neural Networks Learning 
 
-#### machine-learning-ex5 : Regularized Linear Regression and Bias v.s.
-Variance 
-
+#### machine-learning-ex5 : Regularized Linear Regression and Bias v.s. Variance 
