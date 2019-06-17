@@ -48,9 +48,9 @@ x = zeros(n, 1);
 %
 %
 
+% My answer
 
-
-
+x(word_indices) = 1;
 
 
 

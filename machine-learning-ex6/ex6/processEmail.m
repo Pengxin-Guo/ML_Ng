@@ -98,12 +98,15 @@ while ~isempty(email_contents)
     %
 
 
-
-
-
-
-
-
+    % My answer
+    
+    vocabSize = size(vocabList);
+    for index = 1:vocabSize
+      if strcmp(vocabList{index}, str)
+        word_indices = [word_indices; index];
+      endif
+    endfor
+    
 
 
     % =============================================================
