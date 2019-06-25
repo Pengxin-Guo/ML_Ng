@@ -12,5 +12,4 @@
 
 #### machine-learning-ex6 : Support Vector Machines 
 
-#### machine-learning-ex7 : K-means Clustering and Principal Component
-Analysis 
+#### machine-learning-ex7 : K-means Clustering and Principal Component Analysis 
