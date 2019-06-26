@@ -21,9 +21,16 @@ idx = zeros(size(X,1), 1);
 % Note: You can use a for-loop over the examples to compute this.
 %
 
-
-
-
+% My answer
+m = size(X, 1);
+for i = 1:m
+  idx_K = zeros(K, 1);
+  for j = 1:K
+    idx_K(j) = sum((X(i,:) - centroids(j,:)).^2);
+  endfor
+  [value index] = min(idx_K);
+  idx(i) = index;
+endfor
 
 
 
