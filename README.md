@@ -1,4 +1,4 @@
-### 吴恩达`coursera`机器学习练习题代码
+### 吴恩达网易云课堂机器学习练习题代码
 
 #### machine-learning-ex1 : Linear Regression 
 
